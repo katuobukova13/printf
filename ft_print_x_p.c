@@ -6,7 +6,7 @@
 /*   By: qblinky <qblinky@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/29 17:41:52 by qblinky           #+#    #+#             */
-/*   Updated: 2020/07/29 22:37:23 by qblinky          ###   ########.fr       */
+/*   Updated: 2020/07/30 05:39:36 by qblinky          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int			ft_print_p(unsigned long long address, t_flags *flags)
 	if (flags->minus == 0)
 		output += ft_print_width(i, flags);
 	output += ft_putstr("0x", 2);
-	while (precision-- > i)
-		output += ft_putchar_fd('0', 1);
+/* 	while (precision-- > i)
+		output += ft_putchar_fd('0', 1); */
 	output += ft_putstr(s, i);
 	if (flags->minus == 1)
 		output += ft_print_width(i, flags);

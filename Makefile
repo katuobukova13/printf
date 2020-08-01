@@ -6,7 +6,7 @@
 #    By: qblinky <qblinky@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/20 21:12:33 by qblinky           #+#    #+#              #
-#    Updated: 2020/07/29 23:10:09 by qblinky          ###   ########.fr        #
+#    Updated: 2020/07/30 13:44:27 by qblinky          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(MAKE) -C $(LIBFT)
 	cp $(LIBFT)/$(LIBA) $(NAME)
-	$(CC) $(HEADER) $(SRCS)
+	$(CC) -I $(HEADER) $(SRCS)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
